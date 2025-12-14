@@ -36,4 +36,8 @@ build/
 *.tmp
 *.temp
 .cache/
-.md
+
+# Documentation files (Markdown)
+*.md
+!README.md
+plans/
