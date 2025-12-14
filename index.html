@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,117 +22,471 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     
     <title>Hôm Nay Ăn Gì? - Đề Xuất Món Ăn Thông Minh</title>
+    
+    <!-- Theme Script (Inline to prevent flash) -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" data-scrolled="false">
         <div class="container">
             <div class="nav-brand">
-                <a href="/">🍽️ Hôm Nay Ăn Gì?</a>
+                <a href="/">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">Hôm Nay Ăn Gì?</span>
+                </a>
             </div>
+            
             <ul class="nav-menu">
-                <li><a href="/">Trang Chủ</a></li>
-                <li><a href="/privacy-policy.html">Chính Sách</a></li>
-                <li><a href="/support.html">Hỗ Trợ</a></li>
+                <li><a href="#home" class="nav-link active">Trang Chủ</a></li>
+                <li><a href="#features" class="nav-link">Tính Năng</a></li>
+                <li><a href="#how-it-works" class="nav-link">Cách Hoạt Động</a></li>
+                <li><a href="#screenshots" class="nav-link">Hình Ảnh</a></li>
+                <li><a href="#testimonials" class="nav-link">Đánh Giá</a></li>
+                <li><a href="/support.html" class="nav-link">Hỗ Trợ</a></li>
             </ul>
+            
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
         <div class="container">
-            <h1>Hôm Nay Ăn Gì?</h1>
-            <p class="hero-subtitle">Ứng dụng đề xuất món ăn thông minh dựa trên ngữ cảnh, sở thích và vị trí của bạn</p>
-            <div class="hero-cta">
-                <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-primary" target="_blank">
-                    Tải Ngay Trên Google Play
-                </a>
+            <div class="hero-content">
+                <span class="hero-badge">🎉 Miễn phí 100%</span>
+                
+                <h1 class="hero-title">
+                    <span class="line">Hôm Nay</span>
+                    <span class="line gradient-text">Ăn Gì?</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Ứng dụng đề xuất món ăn thông minh dựa trên ngữ cảnh, 
+                    sở thích và vị trí của bạn
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-primary btn-large" target="_blank">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">Tải Ngay</span>
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-large">
+                        <span class="btn-text">Tìm Hiểu Thêm</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Người Dùng</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Đề Xuất</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">Đánh Giá</span>
+                    </div>
+                </div>
             </div>
+            
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <!-- Placeholder for app mockup image -->
+                    <div style="width: 300px; height: 600px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 30px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                        📱 App Preview
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Cuộn xuống</span>
+            <span class="scroll-arrow">↓</span>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
-            <h2>Tính Năng Nổi Bật</h2>
+            <div class="section-header">
+                <span class="section-badge">Tính Năng</span>
+                <h2 class="section-title">Tính Năng Nổi Bật</h2>
+                <p class="section-description">
+                    Khám phá những tính năng thông minh giúp bạn tìm ra món ăn hoàn hảo
+                </p>
+            </div>
+            
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Đề Xuất Theo Vị Trí</h3>
-                    <p>Gợi ý món ăn phù hợp với vị trí hiện tại của bạn</p>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">📍</div>
+                            <div class="feature-icon-bg"></div>
+                        </div>
+                        <h3 class="feature-title">Đề Xuất Theo Vị Trí</h3>
+                        <p class="feature-description">
+                            Gợi ý món ăn phù hợp với vị trí hiện tại của bạn
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Cá Nhân Hóa</h3>
-                    <p>Học hỏi sở thích và đề xuất món ăn phù hợp với bạn</p>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-icon-bg"></div>
+                        </div>
+                        <h3 class="feature-title">Cá Nhân Hóa</h3>
+                        <p class="feature-description">
+                            Học hỏi sở thích và đề xuất món ăn phù hợp với bạn
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌤️</div>
-                    <h3>Dựa Trên Thời Tiết</h3>
-                    <p>Đề xuất món ăn phù hợp với thời tiết hiện tại</p>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">🌤️</div>
+                            <div class="feature-icon-bg"></div>
+                        </div>
+                        <h3 class="feature-title">Dựa Trên Thời Tiết</h3>
+                        <p class="feature-description">
+                            Đề xuất món ăn phù hợp với thời tiết hiện tại
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h3>Lịch Sử & Yêu Thích</h3>
-                    <p>Lưu lại lịch sử và món ăn yêu thích của bạn</p>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">💾</div>
+                            <div class="feature-icon-bg"></div>
+                        </div>
+                        <h3 class="feature-title">Lịch Sử & Yêu Thích</h3>
+                        <p class="feature-description">
+                            Lưu lại lịch sử và món ăn yêu thích của bạn
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Quy Trình</span>
+                <h2 class="section-title">Cách Hoạt Động</h2>
+                <p class="section-description">
+                    Chỉ 4 bước đơn giản để có món ăn hoàn hảo
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content">
+                        <h3>Tải & Đăng Ký</h3>
+                        <p>Tải app và tạo tài khoản miễn phí trong vài giây</p>
+                    </div>
+                    <div class="timeline-line"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                        <h3>Thiết Lập Sở Thích</h3>
+                        <p>Chọn sở thích ăn uống, ngân sách và các yêu cầu đặc biệt</p>
+                    </div>
+                    <div class="timeline-line"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content">
+                        <h3>Nhận Đề Xuất</h3>
+                        <p>AI thông minh sẽ gợi ý món ăn phù hợp nhất với bạn</p>
+                    </div>
+                    <div class="timeline-line"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                        <h3>Thưởng Thức</h3>
+                        <p>Tìm nhà hàng gần nhất và thưởng thức món ăn ngon</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Screenshots Section -->
-    <section class="screenshots">
+    <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2>Hình Ảnh Ứng Dụng</h2>
-            <div class="screenshots-grid">
-                <!-- Thêm screenshots của app vào đây -->
-                <div class="screenshot-placeholder">
-                    <p>Screenshot 1</p>
+            <div class="section-header">
+                <span class="section-badge">Giao Diện</span>
+                <h2 class="section-title">Hình Ảnh Ứng Dụng</h2>
+                <p class="section-description">
+                    Khám phá giao diện đẹp mắt và dễ sử dụng
+                </p>
+            </div>
+            
+            <div class="screenshots-slider-wrapper">
+                <div class="swiper screenshots-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="screenshot-card">
+                                <!-- Placeholder for screenshot -->
+                                <div style="width: 100%; aspect-ratio: 9/16; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                    📱 Màn Hình 1
+                                </div>
+                                <div class="screenshot-caption">Trang Chủ</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="screenshot-card">
+                                <div style="width: 100%; aspect-ratio: 9/16; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                    🎯 Màn Hình 2
+                                </div>
+                                <div class="screenshot-caption">Đề Xuất</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="screenshot-card">
+                                <div style="width: 100%; aspect-ratio: 9/16; background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                    💾 Màn Hình 3
+                                </div>
+                                <div class="screenshot-caption">Yêu Thích</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="screenshot-card">
+                                <div style="width: 100%; aspect-ratio: 9/16; background: linear-gradient(135deg, #2BFF88 0%, #2BD2FF 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                    ⚙️ Màn Hình 4
+                                </div>
+                                <div class="screenshot-caption">Cài Đặt</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="screenshot-placeholder">
-                    <p>Screenshot 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Phản Hồi</span>
+                <h2 class="section-title">Người Dùng Nói Gì?</h2>
+                <p class="section-description">
+                    Hàng nghìn người dùng hài lòng với ứng dụng
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "App tuyệt vời! Giúp tôi không còn đau đầu về chuyện ăn gì nữa. 
+                        Đề xuất rất chính xác và phù hợp với sở thích của mình."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect fill='%23667eea' width='50' height='50'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24'%3ENA%3C/text%3E%3C/svg%3E" alt="User">
+                        <div class="author-info">
+                            <div class="author-name">Nguyễn Văn A</div>
+                            <div class="author-title">Developer</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="screenshot-placeholder">
-                    <p>Screenshot 3</p>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Mình rất thích tính năng đề xuất theo thời tiết. Hôm nay trời mưa 
+                        thì app gợi ý món lẩu, rất hợp lý và tiện lợi!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect fill='%23f59e0b' width='50' height='50'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24'%3ETB%3C/text%3E%3C/svg%3E" alt="User">
+                        <div class="author-info">
+                            <div class="author-name">Trần Thị B</div>
+                            <div class="author-title">Designer</div>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Giao diện đẹp, dễ sử dụng. Tính năng lưu lịch sử và yêu thích 
+                        rất hữu ích. Recommend cho mọi người!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect fill='%2310b981' width='50' height='50'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24'%3ELC%3C/text%3E%3C/svg%3E" alt="User">
+                        <div class="author-info">
+                            <div class="author-name">Lê Văn C</div>
+                            <div class="author-title">Product Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <div class="cta-pattern"></div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Sẵn Sàng Khám Phá?</h2>
+                <p class="cta-description">
+                    Tải ngay để không bao giờ phải băn khoăn "Hôm Nay Ăn Gì?" nữa!
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-white btn-large" target="_blank">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">Tải Trên Google Play</span>
+                    </a>
+                </div>
+                <p class="cta-note">✓ Miễn phí hoàn toàn • ✓ Không quảng cáo • ✓ Không thu phí ẩn</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Hôm Nay Ăn Gì?</h3>
-                    <p>Ứng dụng đề xuất món ăn thông minh</p>
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍽️</span>
+                        <span class="logo-text">Hôm Nay Ăn Gì?</span>
+                    </div>
+                    <p class="footer-description">
+                        Ứng dụng đề xuất món ăn thông minh cho người Việt. 
+                        Giúp bạn tìm ra món ăn hoàn hảo mỗi ngày.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span>🐦</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <span>▶️</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-column">
                     <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="/">Trang Chủ</a></li>
+                        <li><a href="#features">Tính Năng</a></li>
+                        <li><a href="#how-it-works">Cách Hoạt Động</a></li>
+                        <li><a href="/support.html">Hỗ Trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Pháp Lý</h4>
                     <ul>
                         <li><a href="/privacy-policy.html">Chính Sách Bảo Mật</a></li>
                         <li><a href="/terms-of-service.html">Điều Khoản Dịch Vụ</a></li>
                         <li><a href="/delete-account.html">Xóa Tài Khoản</a></li>
-                        <li><a href="/support.html">Hỗ Trợ</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-column">
                     <h4>Liên Hệ</h4>
-                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                    <ul>
+                        <li>
+                            <a href="mailto:godteam.care@gmail.com">
+                                Email: godteam.care@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank">
+                                Tải App
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Hôm Nay Ăn Gì?. All rights reserved.</p>
+                <p>&copy; 2024 Hôm Nay Ăn Gì?. All rights reserved. Made with ❤️ in Vietnam</p>
             </div>
         </div>
+        
+        <button class="back-to-top" aria-label="Back to top">
+            <span class="arrow">↑</span>
+        </button>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- External Scripts -->
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Main JavaScript -->
     <script src="/js/main.js"></script>
 </body>
 </html>
-

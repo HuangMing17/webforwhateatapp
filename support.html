@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,82 +14,54 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     
     <title>Hỗ Trợ - Hôm Nay Ăn Gì?</title>
     
-    <style>
-        .support-container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .support-container h1 {
-            color: #333;
-            border-bottom: 3px solid #4CAF50;
-            padding-bottom: 10px;
-            margin-bottom: 2rem;
-        }
-        .support-container h2 {
-            color: #555;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: #f9f9f9;
-            border-radius: 5px;
-            border-left: 4px solid #4CAF50;
-        }
-        .faq-question {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        .faq-answer {
-            color: #666;
-            line-height: 1.8;
-        }
-        .contact-box {
-            background: #e3f2fd;
-            padding: 20px;
-            border-left: 4px solid #2196F3;
-            margin-top: 30px;
-            border-radius: 4px;
-        }
-        .contact-box a {
-            color: #2196F3;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Theme Script (Inline to prevent flash) -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" data-scrolled="false">
         <div class="container">
             <div class="nav-brand">
-                <a href="/">🍽️ Hôm Nay Ăn Gì?</a>
+                <a href="/">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">Hôm Nay Ăn Gì?</span>
+                </a>
             </div>
+            
             <ul class="nav-menu">
-                <li><a href="/">Trang Chủ</a></li>
-                <li><a href="/privacy-policy.html">Chính Sách</a></li>
-                <li><a href="/support.html">Hỗ Trợ</a></li>
+                <li><a href="/" class="nav-link">Trang Chủ</a></li>
+                <li><a href="/privacy-policy.html" class="nav-link">Chính Sách</a></li>
+                <li><a href="/support.html" class="nav-link active">Hỗ Trợ</a></li>
             </ul>
+            
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <div class="support-container">
+    <main style="padding: var(--section-padding) 0; background: var(--bg-secondary); min-height: calc(100vh - 200px);">
+        <div class="content-container support-container">
             <h1>Hỗ Trợ & Câu Hỏi Thường Gặp</h1>
             <p>Chào mừng bạn đến với trang hỗ trợ của <strong>Hôm Nay Ăn Gì?</strong></p>
             <p>Dưới đây là các câu hỏi thường gặp. Nếu bạn không tìm thấy câu trả lời, vui lòng <a href="#contact">liên hệ với chúng tôi</a>.</p>
@@ -244,8 +216,7 @@
             
             <div class="contact-box">
                 <p>Nếu bạn không tìm thấy câu trả lời ở trên, hoặc cần hỗ trợ thêm, vui lòng liên hệ:</p>
-                <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-                <p><em>Vui lòng thay your-email@example.com bằng email thật của bạn</em></p>
+                <p><strong>Email:</strong> <a href="mailto:godteam.care@gmail.com">godteam.care@gmail.com</a></p>
                 <p><strong>Thời gian phản hồi:</strong> Trong vòng 7 ngày làm việc</p>
                 
                 <h3>Khi Báo Lỗi, Vui Lòng Cung Cấp:</h3>
@@ -270,30 +241,83 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Hôm Nay Ăn Gì?</h3>
-                    <p>Ứng dụng đề xuất món ăn thông minh</p>
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍽️</span>
+                        <span class="logo-text">Hôm Nay Ăn Gì?</span>
+                    </div>
+                    <p class="footer-description">
+                        Ứng dụng đề xuất món ăn thông minh cho người Việt. 
+                        Giúp bạn tìm ra món ăn hoàn hảo mỗi ngày.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span>🐦</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <span>▶️</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-column">
                     <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="/">Trang Chủ</a></li>
+                        <li><a href="/privacy-policy.html">Chính Sách Bảo Mật</a></li>
+                        <li><a href="/terms-of-service.html">Điều Khoản Dịch Vụ</a></li>
+                        <li><a href="/support.html">Hỗ Trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Pháp Lý</h4>
                     <ul>
                         <li><a href="/privacy-policy.html">Chính Sách Bảo Mật</a></li>
                         <li><a href="/terms-of-service.html">Điều Khoản Dịch Vụ</a></li>
                         <li><a href="/delete-account.html">Xóa Tài Khoản</a></li>
-                        <li><a href="/support.html">Hỗ Trợ</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-column">
                     <h4>Liên Hệ</h4>
-                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                    <ul>
+                        <li>
+                            <a href="mailto:godteam.care@gmail.com">
+                                Email: godteam.care@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank">
+                                Tải App
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Hôm Nay Ăn Gì?. All rights reserved.</p>
+                <p>&copy; 2024 Hôm Nay Ăn Gì?. All rights reserved. Made with ❤️ in Vietnam</p>
             </div>
         </div>
+        
+        <button class="back-to-top" aria-label="Back to top">
+            <span class="arrow">↑</span>
+        </button>
     </footer>
 
     <!-- JavaScript -->

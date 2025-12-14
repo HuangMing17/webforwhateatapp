@@ -32,7 +32,7 @@ website/
 
 **File `index.html`:**
 - Thay `YOUR_APP_ID` bằng Application ID thật từ Play Console
-- Thay `your-email@example.com` bằng email thật
+- Email hỗ trợ: `godteam.care@gmail.com` (đã được cấu hình)
 - Thêm screenshots vào thư mục `images/screenshots/`
 - Thêm logo và favicon
 
