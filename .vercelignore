@@ -1,0 +1,7 @@
+# Ignore plans folder
+plans/
+
+# Ignore markdown files except README
+*.md
+!README.md
+
