@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hướng dẫn xóa tài khoản và dữ liệu trong ứng dụng Hôm Nay Ăn Gì?">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homnayangi-website.vercel.app/delete-account.html">
+    <meta property="og:title" content="Yêu Cầu Xóa Tài Khoản - Hôm Nay Ăn Gì?">
+    <meta property="og:description" content="Hướng dẫn xóa tài khoản và dữ liệu trong ứng dụng Hôm Nay Ăn Gì?">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title>Yêu Cầu Xóa Tài Khoản - Hôm Nay Ăn Gì?</title>
+    
+    <style>
+        .delete-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .delete-container h1 {
+            color: #d32f2f;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 10px;
+            margin-bottom: 2rem;
+        }
+        .delete-container h2 {
+            color: #555;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .delete-container p, .delete-container li {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .delete-container ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .steps-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .step {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .step::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4CAF50;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .steps-box {
+            counter-reset: step-counter;
+        }
+        .contact-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #2196F3;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        .btn-delete {
+            display: inline-block;
+            background: #d32f2f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-delete:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">🍽️ Hôm Nay Ăn Gì?</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Trang Chủ</a></li>
+                <li><a href="/privacy-policy.html">Chính Sách</a></li>
+                <li><a href="/support.html">Hỗ Trợ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="delete-container">
+            <h1>Yêu Cầu Xóa Tài Khoản</h1>
+            <p><strong>Ứng dụng: Hôm Nay Ăn Gì?</strong></p>
+            <p><strong>Cập nhật: [Ngày/Tháng/Năm]</strong></p>
+            <p><em>Vui lòng thay [Ngày/Tháng/Năm] bằng ngày cập nhật thực tế</em></p>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Cảnh báo quan trọng:</strong> Việc xóa tài khoản là <strong>KHÔNG THỂ HOÀN TÁC</strong>. 
+                Tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn và không thể khôi phục.</p>
+            </div>
+
+            <h2>1. Các Bước Để Yêu Cầu Xóa Tài Khoản</h2>
+            <div class="steps-box">
+                <div class="step">
+                    <strong>Bước 1: Gửi email yêu cầu</strong><br>
+                    Gửi email đến địa chỉ: <strong><a href="mailto:your-email@example.com">your-email@example.com</a></strong><br>
+                    <em>Vui lòng thay your-email@example.com bằng email thật của bạn</em>
+                </div>
+                <div class="step">
+                    <strong>Bước 2: Cung cấp thông tin</strong><br>
+                    Trong email, vui lòng cung cấp:
+                    <ul>
+                        <li>Email đăng nhập của bạn</li>
+                        <li>Xác nhận bạn muốn xóa tài khoản</li>
+                        <li>Lý do xóa tài khoản (tùy chọn, giúp chúng tôi cải thiện dịch vụ)</li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <strong>Bước 3: Xác nhận yêu cầu</strong><br>
+                    Chúng tôi sẽ xác nhận yêu cầu của bạn trong vòng <strong>7 ngày làm việc</strong> qua email.
+                </div>
+                <div class="step">
+                    <strong>Bước 4: Xóa dữ liệu</strong><br>
+                    Sau khi xác nhận, tài khoản và dữ liệu của bạn sẽ bị xóa trong vòng <strong>30 ngày</strong>.
+                </div>
+            </div>
+
+            <h2>2. Dữ Liệu Sẽ Bị Xóa</h2>
+            <p>Khi bạn yêu cầu xóa tài khoản, các dữ liệu sau sẽ bị xóa vĩnh viễn:</p>
+            <ul>
+                <li><strong>Thông tin tài khoản:</strong>
+                    <ul>
+                        <li>Email, tên hiển thị, ảnh đại diện</li>
+                        <li>User ID và thông tin xác thực</li>
+                    </ul>
+                </li>
+                <li><strong>Hồ sơ người dùng:</strong>
+                    <ul>
+                        <li>Sở thích ăn uống (budget, spice tolerance, vegetarian preferences)</li>
+                        <li>Allergies và cuisines yêu thích</li>
+                        <li>Cài đặt người dùng</li>
+                    </ul>
+                </li>
+                <li><strong>Lịch sử:</strong>
+                    <ul>
+                        <li>Tất cả lịch sử tìm kiếm và đề xuất món ăn</li>
+                        <li>Activity logs (recommendation requests, food selections)</li>
+                    </ul>
+                </li>
+                <li><strong>Dữ liệu hoạt động:</strong>
+                    <ul>
+                        <li>Món ăn đã xem, đã chọn, đã yêu thích</li>
+                        <li>Thống kê sử dụng (streak days, total picked)</li>
+                    </ul>
+                </li>
+                <li><strong>Dữ liệu Firebase:</strong>
+                    <ul>
+                        <li>Tất cả dữ liệu trong Cloud Firestore liên quan đến tài khoản của bạn</li>
+                        <li>Firebase Authentication account</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>3. Dữ Liệu Có Thể Được Giữ Lại</h2>
+            <p>Một số dữ liệu có thể được giữ lại cho mục đích pháp lý hoặc phân tích:</p>
+            <ul>
+                <li><strong>Dữ liệu phân tích tổng hợp:</strong> 
+                    Dữ liệu đã được ẩn danh hóa trong Firebase Analytics (không thể nhận diện cá nhân)
+                </li>
+                <li><strong>Logs hệ thống:</strong> 
+                    Logs kỹ thuật có thể được giữ lại tối đa <strong>90 ngày</strong> để xử lý sự cố và tuân thủ pháp luật
+                </li>
+                <li><strong>Dữ liệu pháp lý:</strong> 
+                    Nếu có yêu cầu pháp lý, một số dữ liệu có thể được giữ lại theo quy định
+                </li>
+            </ul>
+
+            <h2>4. Thời Gian Xóa Dữ Liệu</h2>
+            <ul>
+                <li><strong>Xác nhận yêu cầu:</strong> Trong vòng <strong>7 ngày làm việc</strong> kể từ khi nhận email</li>
+                <li><strong>Xóa dữ liệu:</strong> Trong vòng <strong>30 ngày</strong> sau khi xác nhận</li>
+                <li><strong>Xóa hoàn toàn:</strong> Tất cả dữ liệu sẽ bị xóa vĩnh viễn, không thể khôi phục</li>
+            </ul>
+
+            <h2>5. Xóa Dữ Liệu Mà Không Xóa Tài Khoản</h2>
+            <p>Hiện tại, ứng dụng <strong>Hôm Nay Ăn Gì?</strong> cho phép bạn:</p>
+            <ul>
+                <li><strong>Xóa lịch sử:</strong> Xóa lịch sử tìm kiếm và đề xuất trong ứng dụng</li>
+                <li><strong>Xóa favorites:</strong> Xóa danh sách món ăn yêu thích</li>
+                <li><strong>Reset cài đặt:</strong> Reset lại sở thích và cài đặt về mặc định</li>
+            </ul>
+            <p><strong>Để thực hiện:</strong></p>
+            <ol>
+                <li>Mở ứng dụng <strong>Hôm Nay Ăn Gì?</strong></li>
+                <li>Vào màn hình <strong>Cài đặt</strong></li>
+                <li>Chọn <strong>Xóa lịch sử</strong> hoặc <strong>Xóa dữ liệu</strong></li>
+                <li>Xác nhận hành động</li>
+            </ol>
+            <div class="warning-box">
+                <p><em><strong>Lưu ý:</strong> Để xóa hoàn toàn tài khoản và tất cả dữ liệu, bạn vẫn cần gửi email yêu cầu như hướng dẫn ở trên.</em></p>
+            </div>
+
+            <h2>6. Hủy Yêu Cầu Xóa</h2>
+            <p>Nếu bạn thay đổi ý định sau khi đã gửi yêu cầu xóa tài khoản:</p>
+            <ul>
+                <li>Gửi email đến <strong><a href="mailto:your-email@example.com">your-email@example.com</a></strong></li>
+                <li>Yêu cầu hủy việc xóa tài khoản</li>
+                <li>Chúng tôi sẽ hủy yêu cầu nếu dữ liệu chưa bị xóa</li>
+            </ul>
+
+            <div class="contact-box">
+                <h2>7. Liên Hệ</h2>
+                <p>Nếu bạn có câu hỏi về việc xóa tài khoản, vui lòng liên hệ:</p>
+                <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                <p><em>Vui lòng thay your-email@example.com bằng email thật của bạn</em></p>
+                <p><strong>Thời gian phản hồi:</strong> Trong vòng 7 ngày làm việc</p>
+                <p><strong>Chủ đề email:</strong> "Yêu cầu xóa tài khoản - Hôm Nay Ăn Gì?"</p>
+                
+                <a href="mailto:your-email@example.com?subject=Yêu cầu xóa tài khoản - Hôm Nay Ăn Gì?" class="btn-delete">
+                    📧 Gửi Email Yêu Cầu Xóa Tài Khoản
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hôm Nay Ăn Gì?</h3>
+                    <p>Ứng dụng đề xuất món ăn thông minh</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="/privacy-policy.html">Chính Sách Bảo Mật</a></li>
+                        <li><a href="/terms-of-service.html">Điều Khoản Dịch Vụ</a></li>
+                        <li><a href="/delete-account.html">Xóa Tài Khoản</a></li>
+                        <li><a href="/support.html">Hỗ Trợ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên Hệ</h4>
+                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hôm Nay Ăn Gì?. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
+
